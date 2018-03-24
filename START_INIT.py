@@ -4,8 +4,8 @@ from netConnect import *
 from ntp import *
 from machine import Timer,Pin
 
-SSID = 'NTS'
-PASSWORD = 'nanjingtiansu'
+SSID = '用户名'
+PASSWORD = '密码'
 
 #连接wifi网络
 IP = connectWifi(SSID,PASSWORD)
