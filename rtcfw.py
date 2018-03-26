@@ -1,7 +1,7 @@
 from machine import RTC,Pin
 from utime import localtime,sleep_ms,sleep
 
-lstimeDS = (localtime()[0:3]+(8,45,0)+localtime()[6:9])
+lstimeDS = (localtime()[0:3]+(8,43,0)+localtime()[6:9])
 
 #引脚定义
 beep = Pin(14, Pin.OUT)
@@ -25,14 +25,14 @@ def getTime():
 
 #校验
 def timeJy(_lsTime):
-    print("开始时间校验！")
+    #print("开始时间校验！")
     tm = getTime()
     if tm[2] == _lsTime[3:5]:
         Beep()
 
 #闹铃
 def Beep():
-    print("闹铃响！")
+    #print("闹铃响！")
     beep.value(0)
     LEDG.value(1),LEDR.value(0)
 
@@ -47,6 +47,6 @@ def Beep():
     beep.value(0)
     LEDG.value(0)
     LEDR.value(0)
-    print("闹铃关闭！")
-    sleep(60)
+    #print("闹铃关闭！")
+    sleep(1)
 

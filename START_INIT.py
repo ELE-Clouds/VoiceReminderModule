@@ -5,15 +5,30 @@ from ntp import *
 from machine import Timer,Pin
 
 SSID = '用户名'
-PASSWORD = '密码'
+PASSWORD = '用户密码'
+
+flsOled()
+olDesplay(('Connecting...',0,32))
 
 #连接wifi网络
 IP = connectWifi(SSID,PASSWORD)
-print("网络连接成功！")
+if IP != '0.0.0.0':
+    flsOled()
+    olDesplay(('WLAN Successful!', 0, 32))
+    #print("网络连接成功！")
+    sleep(1)
 
-#系统启动时NTP时间同步一次
-setTime()
-print("时间同步成功，开始初始化引脚！")
+    # 系统启动时NTP时间同步一次
+    while not setTime():
+        #print("NTP时间同步失败，重新同步！")
+        sleep(1)
+else:
+    flsOled()
+    olDesplay(('WLAN Failed!', 0, 32))
+    #print('网络连接失败！')
+    sleep(1)
+
+
 
 #引脚电位初始化
 Pin(12).value(0)

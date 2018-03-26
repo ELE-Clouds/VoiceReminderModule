@@ -40,7 +40,7 @@ KT603C管脚说明
 RTC实时时钟模块：<BR>
 
 RTC.datetime(datetime)
-*设置与获取当前时间*
+*设置与获取当前时间*<BR>
 datetime格式：(year,month,day,weekday(0~6),hour,minute,second,yearday(1~366))
 不带参数时为获取时间
 

@@ -31,7 +31,6 @@ def connectWifi(_ssid, _passwd):  # 建立wifi连接
     while (wlan.ifconfig()[0] == '0.0.0.0'):
         time.sleep(1)
         count += 1
-        if count == 50:
-            return False
+        if count == 30:
             break
     return wlan.ifconfig()[0]
