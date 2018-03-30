@@ -4,8 +4,8 @@ from netConnect import *
 from ntp import *
 from machine import Timer,Pin
 
-SSID = 'NTS'
-PASSWORD = 'nanjingtiansu'
+SSID = '用户名'
+PASSWORD = '用户密码'
 
 flsOled()
 olDesplay(('Connecting...',0,32))
