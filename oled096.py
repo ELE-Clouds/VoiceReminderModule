@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+
 from machine import I2C,Pin
 from ssd1306 import SSD1306_I2C
 

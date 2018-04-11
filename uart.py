@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+
 from machine import UART
 
 uart1 = UART(1,9600)

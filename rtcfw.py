@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+
 from machine import RTC,Pin
 from utime import localtime,sleep_ms,sleep
 from uart import *

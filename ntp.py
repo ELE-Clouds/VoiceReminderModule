@@ -1,7 +1,10 @@
+#-*-coding:utf-8-*-
+
 import ntptime
 from utime import localtime,sleep
 from machine import RTC
 
+# 校时服务器列表
 NTPHOST = ('cn.ntp.org.cn','edu.ntp.org.cn','time.windows.com')
 
 ntptime.host = NTPHOST[0]

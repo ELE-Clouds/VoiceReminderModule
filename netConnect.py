@@ -1,6 +1,10 @@
+#-*-coding:utf-8-*-
+
 import network
 import time
-def connectWifi(_ssid, _passwd):  # 寤虹珛wifi杩炴帴
+
+# 连接WIFI
+def connectWifi(_ssid, _passwd):
     global wlan
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
